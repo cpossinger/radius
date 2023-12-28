@@ -13,11 +13,7 @@ data:
       port: 9443
 
     storageProvider: {{ .Values.global.storageProvider | indent 6 }}
-      provider: "apiserver"
-      apiserver:
-        context: ""
-        namespace: "radius-system"
-
+      
     secretProvider:
       provider: kubernetes
 
