@@ -13,7 +13,7 @@ data:
     environment:
       name: self-hosted
       roleLocation: "global"
-    storageProvider: {{ toYaml .Values.global.storageProvider | indent 6 }}
+    storageProvider: {{ toYaml .Values.global.storageProvider | nindent 6 }}
     queueProvider:
       provider: "apiserver"
       name: "radius"
