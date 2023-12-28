@@ -19,7 +19,7 @@ data:
       name: "radius"
       apiserver:
         context: ""
-        namespace: "radius-system"
+        namespace: {{ .Release.Namespace }}
     metricsProvider:
       prometheus:
         enabled: true

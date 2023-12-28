@@ -21,7 +21,7 @@ data:
       name: "ucp"
       apiserver:
         context: ""
-        namespace: "radius-system"
+        namespace: {{ .Release.Namespace }}
 
     profilerProvider:
       enabled: true
@@ -31,11 +31,11 @@ data:
       - id: "/planes/radius/local"
         properties:
           resourceProviders:
-            Applications.Core: "http://applications-rp.radius-system:5443"
-            Applications.Dapr: "http://applications-rp.radius-system:5443"
-            Applications.Datastores: "http://applications-rp.radius-system:5443"
-            Applications.Messaging: "http://applications-rp.radius-system:5443"
-            Microsoft.Resources: "http://bicep-de.radius-system:6443"
+            Applications.Core: "http://applications-rp.{{ .Release.Namespace }}:5443"
+            Applications.Dapr: "http://applications-rp.{{ .Release.Namespace }}:5443"
+            Applications.Datastores: "http://applications-rp.{{ .Release.Namespace }}:5443"
+            Applications.Messaging: "http://applications-rp.{{ .Release.Namespace }}:5443"
+            Microsoft.Resources: "http://bicep-de.{{ .Release.Namespace }}:6443"
           kind: "UCPNative"
       - id: "/planes/aws/aws"
         properties:

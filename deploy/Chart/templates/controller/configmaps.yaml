@@ -22,7 +22,7 @@ data:
       name: "ucp"
       apiserver:
         context: ""
-        namespace: "radius-system"
+        namespace: {{ .Release.Namespace }}
 
     profilerProvider:
       enabled: true
