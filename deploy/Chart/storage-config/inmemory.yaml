@@ -3,6 +3,4 @@ global:
     provider: "etcd"
     etcd:
       inmemory: true
-  queueProvider:
-    provider: inmemory
-    name: radius
+  
