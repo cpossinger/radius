@@ -12,7 +12,7 @@ data:
       host: "0.0.0.0"
       port: 9443
 
-    storageProvider: {{ toYaml .Values.storageProvider | nindent 6 }}
+    storageProvider: {{ toYaml .Values.global.storageProvider | nindent 6 }}
       
     secretProvider:
       provider: kubernetes
