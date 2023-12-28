@@ -11,7 +11,7 @@ data:
     # Radius configuration file.
     # See https://github.com/radius-project/radius/blob/main/docs/contributing/contributing-code/contributing-code-control-plane/configSettings.md for more information.
     location: 'global'
-    storageProvider: {{ .Values.global.storageProvider | indent 6 }}
+    storageProvider: {{ toYaml .Values.storageProvider | nindent 6 }}
       
     secretProvider:
       provider: kubernetes
