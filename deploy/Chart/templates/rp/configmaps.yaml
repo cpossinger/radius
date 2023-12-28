@@ -13,11 +13,7 @@ data:
     environment:
       name: self-hosted
       roleLocation: "global"
-    storageProvider:
-      provider: "apiserver"
-      apiserver:
-        context: ""
-        namespace: "radius-system"
+    storageProvider: {{ .Values.global.storageProvider | indent 6 }}
     queueProvider:
       provider: "apiserver"
       name: "radius"
