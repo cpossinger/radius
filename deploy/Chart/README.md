@@ -34,13 +34,13 @@ kubectl get pods -n radius-system
 
 To uninstall/delete the `contour` deployment:
 
-helm delete contour
+helm uninstall contour -n radius-system
 
 
 To uninstall/delete the `radius` deployment:
 
 ```console
-helm delete radius
+helm uninstall radius -n radius-system
 ```
 
 The command removes all the Kubernetes components associated with the chart and deletes the release.
