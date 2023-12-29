@@ -14,12 +14,8 @@ data:
       name: self-hosted
       roleLocation: "global"
     storageProvider: {{ toYaml .Values.global.storageProvider | nindent 6 }}
-    queueProvider:
-      provider: "apiserver"
+    queueProvider: {{ toYaml .Values.global.queueProvider | nindent 6 }} 
       name: "radius"
-      apiserver:
-        context: ""
-        namespace: {{ .Release.Namespace }}
     metricsProvider:
       prometheus:
         enabled: true

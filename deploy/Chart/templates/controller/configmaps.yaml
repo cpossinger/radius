@@ -17,12 +17,8 @@ data:
     secretProvider:
       provider: kubernetes
 
-    queueProvider:
-      provider: "apiserver"
+    queueProvider: {{ toYaml .Values.global.queueProvider | nindent 6 }}
       name: "ucp"
-      apiserver:
-        context: ""
-        namespace: {{ .Release.Namespace }}
 
     profilerProvider:
       enabled: true

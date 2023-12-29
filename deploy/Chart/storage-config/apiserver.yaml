@@ -4,4 +4,10 @@ global:
     apiserver:
       context: ""
       namespace: "radius-system"
+  queueProvider:
+      provider: "apiserver"
+      apiserver:
+        context: ""
+        namespace: "radius-system" 
+
   
